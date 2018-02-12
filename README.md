@@ -52,20 +52,20 @@ Finish
 
 #STeps(for the app)
 1. ```cd var/www```
-2. ```sudo mkdir catalog ```cd catalog```
-3. ```import sys
+2. ```sudo mkdir catalog ```cd catalog
+3. create a catalog.wsgi file and paste this
+```import sys
 import logging
 logging.basicConfig(stream=sys.stderr)
 sys.path.insert(0, "/var/www/catalog/")
-
 from catalog import app as application
 application.secret_key = 'supersecretkey'
-~                                             ```
+~ ```
 4. ```sudo mkdir catalog``` (your route will look like this ~/var/www/catalog/catalog) ```cd catalog```
-5. ```sudo git clone https://github.com/longchass/Udacity-item-catalog-ofc-/tree/uda-linux-server
-6.```sudo nano /etc/apache2/sites-available/catalog.conf```
-put this in ```
-<VirtualHost *:80>
+5. ```sudo git clone https://github.com/longchass/Udacity-item-catalog-ofc-/tree/uda-linux-server```
+6. ```sudo nano /etc/apache2/sites-available/catalog.conf```
+put this in
+```<VirtualHost *:80>
     ServerName 54.252.223.127
     ServerAdmin admin@54.252.223.127
     WSGIDaemonProcess catalog python-path=/var/www/catalog:/var/www/catalog/venv/lib/python2.7/site-packages
@@ -84,6 +84,7 @@ put this in ```
     LogLevel warn
     CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>```
-
+7. ```run database_setup.py``` and ```database_init.py```
 #Reference
 thank you for the README (kongling893)[https://github.com/kongling893/Linux-Server-Configuration-UDACITY]
+
