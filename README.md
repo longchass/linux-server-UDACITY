@@ -54,14 +54,14 @@ Finish
 
 1. ```cd var/www```
 2. ```sudo mkdir catalog ```cd catalog
-3. create a catalog.wsgi file and paste this
-```import sys
+
+3. ```create a catalog.wsgi file and paste this
+import sys
 import logging
 logging.basicConfig(stream=sys.stderr)
 sys.path.insert(0, "/var/www/catalog/")
 from catalog import app as application
-application.secret_key = 'supersecretkey'
-~ ```
+application.secret_key = 'supersecretkey'```
 
 4. make another catalog ```sudo mkdir catalog``` (your route will look like this ~/var/www/catalog/catalog) ```cd catalog```
 5. clone the application```sudo git clone https://github.com/longchass/Udacity-item-catalog-ofc-/tree/uda-linux-server```
