@@ -50,6 +50,40 @@ from now on everything should take place in your ```grader``` on the virtual mac
 ```sudo apt-get install libapache2-mod-wsgi```
 Finish
 
+#STeps(for the app)
+1. ```cd var/www```
+2. ```sudo mkdir catalog ```cd catalog```
+3. ```import sys
+import logging
+logging.basicConfig(stream=sys.stderr)
+sys.path.insert(0, "/var/www/catalog/")
+
+from catalog import app as application
+application.secret_key = 'supersecretkey'
+~                                             ```
+4. ```sudo mkdir catalog``` (your route will look like this ~/var/www/catalog/catalog) ```cd catalog```
+5. ```sudo git clone https://github.com/longchass/Udacity-item-catalog-ofc-/tree/uda-linux-server
+6.```sudo nano /etc/apache2/sites-available/catalog.conf```
+put this in ```
+<VirtualHost *:80>
+    ServerName 54.252.223.127
+    ServerAdmin admin@54.252.223.127
+    WSGIDaemonProcess catalog python-path=/var/www/catalog:/var/www/catalog/venv/lib/python2.7/site-packages
+    WSGIProcessGroup catalog
+    WSGIScriptAlias / /var/www/catalog/catalog.wsgi
+    <Directory /var/www/catalog/catalog/>
+        Order allow,deny
+        Allow from all
+    </Directory>
+    Alias /static /var/www/catalog/catalog/static
+    <Directory /var/www/catalog/catalog/static/>
+        Order allow,deny
+        Allow from all
+    </Directory>
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    LogLevel warn
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>```
+
 #Reference
-application file borrowed from:
-https://github.com/kongling893/Linux-Server-Configuration-UDACITY
+thank you for the README (kongling893)[https://github.com/kongling893/Linux-Server-Configuration-UDACITY]
