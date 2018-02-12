@@ -1,8 +1,8 @@
 # FULLSTACK NANODEGREE-UDACITY
 #Server details
-- IP address:13.54.188.252
+- IP address:54.252.223.127
 - SSH port: 2200
-- URL: https://lightsail.aws.amazon.com/ls/webapp/ap-southeast-2/instances/Ubuntu-512MB-Sydney-1/
+- Hostname:ec2-54-252-223-127.ap-southeast-2.compute.amazonaws.com
 
 #Description
 
