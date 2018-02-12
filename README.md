@@ -88,6 +88,7 @@ put this in
 </VirtualHost>```
 
 7. ```run database_setup.py``` and ```database_init.py```
+
 #Reference
 thank you for the README (kongling893)[https://github.com/kongling893/Linux-Server-Configuration-UDACITY]
 
