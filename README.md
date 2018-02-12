@@ -86,9 +86,8 @@ put this in
     LogLevel warn
     CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>```
-
 7. ```run database_setup.py``` and ```database_init.py```
 
-#Reference
+##Reference
 thank you for the README (kongling893)[https://github.com/kongling893/Linux-Server-Configuration-UDACITY]
 
