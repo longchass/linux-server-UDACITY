@@ -55,7 +55,8 @@ Finish
 1. ```cd var/www```
 2. ```sudo mkdir catalog ```cd catalog
 
-3. ```create a catalog.wsgi file and paste this
+3. create a catalog.wsgi file and paste this
+```
 import sys
 import logging
 logging.basicConfig(stream=sys.stderr)
