@@ -88,6 +88,5 @@ put this in
 
 
 
-##Reference
-thank you for the README (kongling893)[https://github.com/kongling893/Linux-Server-Configuration-UDACITY]
+##Reference thank you for the README [kongling893](https://github.com/kongling893/Linux-Server-Configuration-UDACITY)
 
