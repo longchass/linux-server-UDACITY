@@ -83,7 +83,9 @@ put this in
     ErrorLog ${APACHE_LOG_DIR}/error.log
     LogLevel warn
     CustomLog ${APACHE_LOG_DIR}/access.log combined
-</VirtualHost>```
+</VirtualHost>
+```
+
 7. ```run database_setup.py``` and ```database_init.py```
 
 
