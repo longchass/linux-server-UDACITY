@@ -1,5 +1,5 @@
 # FULLSTACK NANODEGREE-UDACITY
-#Server details
+#Server details since python 3 have been update this is officially outdated and i'm not expecting myself to migrate the code to the new version so check out my webstie https://longchass.com/
 - IP address:54.252.223.127
 - SSH port: 2200
 - Hostname:ec2-54-252-223-127.ap-southeast-2.compute.amazonaws.com
